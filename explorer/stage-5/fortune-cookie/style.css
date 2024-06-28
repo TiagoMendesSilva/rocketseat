@@ -1,0 +1,161 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 62.5%;
+}
+
+body, button, input {
+    font-family: "Montserrat", sans-serif;
+
+}
+body {
+    /*background: linear-gradient(90deg, #190361 0%, #BB00FF 100%);*/
+    background: linear-gradient(45deg, #190361, #BB00FF);
+    font-size: 1.6rem;
+
+    display: grid;
+    place-items: center;
+    height: 100vh;
+
+    animation: gradient 10s ease infinite;
+    background-size: 200% 200%;
+}
+
+main {
+
+    background: #FFFFFF;
+    width: min(42.8rem, 90%);
+
+    box-shadow: 0 2rem 5rem rgb(0, 0, 0, 1);
+    border-radius: 0.5rem;
+
+    padding: 4.8rem 6.4rem;
+
+    
+    text-align: center;
+}
+
+.hide {
+    display: none;
+}
+
+h2 {
+    font-size: 2.4rem;
+    font-weight: bold;
+    color: #34355B;
+    margin-bottom: 1rem;
+}
+
+p {
+    margin-bottom: 2rem;
+    
+}
+
+@keyframes tremor {
+    0%{ transform: translate(0.1rem, 0.1rem) rotate(0deg);}
+    10%{ transform: translate(-0.1rem, -0.2rem) rotate(-1deg);}
+    20%{ transform: translate(-0.3rem,0) rotate(1deg);}
+    30%{ transform: translate(0.3rem, 0.2rem) rotate(0deg);}
+    40%{ transform: translate(0.1rem, -0.1rem) rotate(1deg);}
+    50%{ transform: translate(-0.1rem, -0.2rem) rotate(-1deg);}
+    60%{ transform: translate(-0.3rem, 0.1rem) rotate(0deg);}
+    70%{ transform: translate(0.3rem, 0.1rem) rotate(-1deg);}
+    80%{ transform: translate(-0.1rem, -0.1rem) rotate(1deg);}
+    90%{ transform: translate(0.1rem, 0.2rem) rotate(0deg);}
+    100%{ transform: translate(0.1rem, -0.2rem) rotate(-1deg);}
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0 50%;
+    }
+}
+
+@keyframes slideUp {
+    0% {opacity: 0; transform: translateY(20rem) scale(0);}
+    10% {opacity: 0.1; transform: translateY(18rem) scale(0.1);}
+    20% {opacity: 0.2; transform: translateY(16rem) scale(0.2);}
+    30% {opacity: 0.3; transform: translateY(14rem) scale(0.3);}
+    40% {opacity: 0.4; transform: translateY(12rem) scale(0.4);}
+    50% {opacity: 0.5; transform: translateY(10rem) scale(0.5);}
+    60% {opacity: 0.6; transform: translateY(8rem) scale(0.6);}
+    70% {opacity: 0.7; transform: translateY(6rem) scale(0.7);}
+    80% {opacity: 0.8; transform: translateY(4rem) scale(0.8);}
+    90% {opacity: 0.9; transform: translateY(2rem) scale(0.9);}
+    100% {opacity: 1; transform: translateY(0) scale(1);}
+}
+
+/*Screen 1*/
+.screen1 p {
+    font-size: 1.5rem;
+    font-weight: 400;
+    font-family: "DM Sans", sans-serif;
+}
+
+
+.screen1 img {
+    margin-bottom: 1.5rem;
+
+    cursor: pointer;
+    
+    transition: transform 0.2s;
+
+}
+.screen1 img:hover {
+    animation: tremor 0.5s infinite;
+}
+
+.screen2 h2 {
+    padding: 1rem;
+}
+
+button {
+    font-family: "DM Sans", sans-serif;
+    font-size: 1.5rem;
+    font-weight: bold;
+
+    border: none;
+    padding: 1.5rem;
+    border-radius: 0.4rem;
+
+    color: #FFFFFF;
+    background-color: #FF9500;
+
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button:hover{
+    background-color: #e78907;
+}
+
+
+#animated-paragraph {
+    font-size: 2rem;
+    font-weight: 400;
+    font-family: "Dancing Script", cursive;
+    color: #000000; 
+    padding: 1rem;
+    
+    background: #E4EDF1;
+    box-shadow: 0.2rem 0.2rem 0.2rem rgb(85, 85, 85, 0.5);
+    
+    opacity: 0; /*invisível no início*/
+    transform: translateY(20rem) scale(0);
+    /* Inicialmente, o parágrafo é movido 20rem para baixo e reduzido a zero em tamanho*/
+    animation: slideUp 1s ease-in-out forwards;/*A animação é executada por 1s, com uma transição suave*/
+}
+
+
+
+
